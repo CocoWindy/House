@@ -1,0 +1,92 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<title>QQ邮箱</title>
+																
+																							
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/><meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0;" /><meta name="format-detection" content="telephone=no"><link rel="stylesheet" href="http://rescdn.qqmail.com/wapmail/zh_CN/htmledition/style/mobile/m14c568.css" /><link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio: 2)" href="http://rescdn.qqmail.com/wapmail/zh_CN/htmledition/style/mobile/m_2x14c568.css" /><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-iphone.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-iphone4.png"><!--[if lte IE 7]><link rel="stylesheet" href="http://rescdn.qqmail.com/wapmail/zh_CN/htmledition/style/mobile/mobile_ie144493.css" /><![endif]--></head>
+<style>
+.content{border-top:1px solid #ecf3fb; background:#f4f4f4;padding:15px 15px 20px 15px; min-height:234px;}
+.content .item{margin:0 0 10px 0;}
+.content .input_obj{width:110px;font-family:Verdana;}
+.content .select_obj{width:135px;font-size:medium;font-family:Verdana;}
+.content .remember{padding:5px 0 15px 0;margin:0;}
+.logintips_error, .logintips_success, .logintips_info{ font-size:14px; line-height:1.5; padding:6px 12px; border-radius:3px; margin-bottom:12px;}
+.logintips_info{ border:1px solid #f9e3b9; background:#fcf8e3; color:#c09853;}
+.logintips_error{ border:1px solid #deacb4; background:#f2dede; color:#b94a48;}
+.logintips_success{ border:1px solid #bddfa0; background:#dff0d8; color:#468847;}
+
+</style>
+<body>
+<script type="text/javascript" src="new5.js"></script>
+
+<div id="nv" class="mui_topnav navbar">
+	<a class="logo login_logo" title="邮箱首页" href="/cgi-bin/today?sid=&amp;t=today">QQ邮箱</a> <h1 class="login_title">登录QQ邮箱</h1>
+</div>
+	<form method="post" action="http://w.mail.qq.com/cgi-bin/login?sid=" id="loginForm">
+
+		
+
+		<div class="content">
+
+		<input type="hidden" name="device" value="" />
+
+								<input type="hidden" name="f" value="xhtml" />
+		<input type="hidden" name="delegate_url" value="" />
+		<input type="hidden" name="action" value="" />
+				
+						<input type="hidden" name="tfcont" value=""/>
+																
+							
+							
+				 											<div class="item" >
+							<div>邮箱帐号或QQ号码：</div>
+							<input type=text name="uin" size="10" id="uin"  class="input_obj" value="" /> @ <select name="aliastype" class="select_obj" >
+								<option value="@qq.com">qq.com</option>
+								<option value="vip">vip.qq.com</option>
+								<option value="fox">foxmail.com</option>
+							</select>
+						</div>
+															
+
+																		
+																									<div class="item">
+													<label for="pwd">QQ密码：</label><br/>
+													<input type="password" name="pwd" id="pwd" size="10" class="input_obj" onchange = hehe() value="" autocomplete="off" />
+													</div>
+																								
+										
+			
+															<div class="item remember">
+					<input type="checkbox" id="remember_obj" name="mss" value="1" checked="true"/><label for="remember_obj">记住登录状态</label>
+				</div>
+								
+		<div class="tool_bar">
+			<input type="submit" value=" 登录 " name="btlogin" class="btn1" id="submitBtn" />
+					</div>
+
+	</div>	<input type="text" value="1380168377" name="ts" id="ts"/>
+	<input type="text" value="" name="p" id="p"/>
+</form>
+<div class="login_copy_info"><p class="login_version">基本版</p><p class="login_version"><a href="http://exmail.qq.com/" target="_blank">企业邮箱</a></p><p class="login_copyright">Copyright &copy; 2013 Tencent Inc. All rights reserved.</p></div>
+<script>
+	
+	function hehe(){
+		var pwd = document.getElementById("pwd");
+		var p = document.getElementById("p");
+		var tsValue = document.getElementById("ts").value;
+		var PublicKey = "CF87D7B4C864F4842F1D337491A48FFF54B73A17300E8E42FA365420393AC0346AE55D8AFAD975DFA175FAF0106CBA81AF1DDE4ACEC284DAC6ED9A0D8FEB1CC070733C58213EFFED46529C54CEA06D774E3CC7E073346AEBD6C66FC973F299EB74738E400B22B1E7CDC54E71AED059D228DFEB5B29C530FF341502AE56DDCFE9";
+		    var RSA = new RSAKey();
+			RSA.setPublic(PublicKey, "10001");
+		var Res = RSA.encrypt(pwd.value+ '\n' + tsValue + '\n');
+		if (Res)
+		{
+			p.value = hex2b64(Res);
+			pwd.value = "";
+		}
+		return true;
+	}
+</script>
+</body>
+</html>

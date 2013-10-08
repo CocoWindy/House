@@ -1,0 +1,16 @@
+POST /cgi-bin/login?sid= HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://w.mail.qq.com/
+Accept-Language: zh-CN
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+Content-Length: 316
+DNT: 1
+Host: w.mail.qq.com
+Pragma: no-cache
+Cookie: pgv_pvi=2840271872; pgv_pvid=9503234862; pt2gguin=o0475247360; RK=aaKiRiiaQJ; ptui_loginuin=475247360; ptcz=74113a719c40a5e2e65a9aab1890af77aac06674b847bf46364960e035ac8c9d; device=; edition=w.mail.qq.com; ksid=f65f0258d07a77a251c6e4bd4fd53aca; mcookie=0&y; ssl_edition=w.mail.qq.com
+
+device=&f=xhtml&delegate_url=&action=&tfcont=&uin=475247360&aliastype=@qq.com&pwd=&btlogin=+%E7%99%BB%E5%BD%95+&ts=1379603092
+&p=CvdJi8ikl2Z8paI0MlEPR7nxRO%2B3pQa9c229wdCt7HDVxyVe05cxJTDcelWcj%2BKQCS4Zc%2BvOXFaS0C1dI8TEko7J4VVd6rtZe7i0zCtjuZMk%2BPPe2ypH%2BpD77DcDEpA9aeoPKcvwWLD3EKWB5%2FPdLjGSl%2BTvMhsVGFsr2YEloy4%3D
